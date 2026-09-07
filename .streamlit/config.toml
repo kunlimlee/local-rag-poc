@@ -1,0 +1,18 @@
+# Streamlit 보안 설정 — 시연 전 반드시 적용된 상태여야 한다.
+
+[browser]
+# 기본값은 true. 사용 통계가 외부로 전송된다.
+# "데이터가 나가지 않는다"는 설명과 충돌하므로 끈다.
+gatherUsageStats = false
+
+[server]
+# 기본값은 모든 네트워크 인터페이스에 바인딩(0.0.0.0)이라
+# 같은 망의 다른 PC에서 사내 문서 챗봇에 접속할 수 있다.
+# 이 PC에서만 접속 가능하도록 제한한다.
+address = "localhost"
+
+# 실행 시 브라우저 자동 실행 여부 (시연 시에는 true 가 편하다)
+headless = false
+
+# 파일 업로드 기능 미사용
+maxUploadSize = 1

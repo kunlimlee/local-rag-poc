@@ -1,0 +1,21 @@
+# 사내 문서 RAG PoC — Python 3.14.6 에서 설치 검증 완료 (2026-09-07)
+#
+# 설치:  .venv\Scripts\python.exe -m pip install -r requirements.txt
+# 폐쇄망: pip download -r requirements.txt -d ./wheels  로 미리 받아 반입
+#         pip install --no-index --find-links=./wheels -r requirements.txt
+
+# 0단계 — Gemini API
+google-genai
+python-dotenv
+
+# 1단계 — 문서 텍스트 추출
+pypdf
+docx2txt
+
+# 2단계 — 청킹 + 로컬 임베딩 + 벡터 DB
+langchain-text-splitters
+sentence-transformers
+chromadb
+
+# 5단계 — UI
+streamlit
